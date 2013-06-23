@@ -11,7 +11,11 @@ class AutomailerRepository extends EntityRepository
 {
     public function findNext($limit)
     {
+<<<<<<< HEAD
         $query = $this->getEntityManager()->createQuery("SELECT am FROM TSSAutomailerBundle:Automailer am WHERE am.isSent = :is_sent AND am.isFailed = :is_failed AND am.isSending = :is_sending ORDER BY am.priority ASC")
+=======
+        $query = $this->getEntityManager()->createQuery("SELECT am FROM TSSAutomailerBundle:Automailer am WHERE am.isSent = :is_sent AND am.isFailed = :is_failed AND am.isSending = :is_sending ORDER BY am.createdAt ASC")
+>>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
 				->setParameter('is_sent', false)
 				->setParameter('is_failed', false)
 				->setParameter('is_sending', false)

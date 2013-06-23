@@ -10,15 +10,19 @@ class AutomailerSpool extends \Swift_ConfigurableSpool
      * The Entity Manager
      */
     private $_em;
+<<<<<<< HEAD
     
     /**
      * The Swift Transport
      */
     private $_transport;
+=======
+>>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
 
     /**
      * Create a new AutomailerSpool.
      * @param  Doctrine\EntityManager $em
+<<<<<<< HEAD
      * @param Swift_Transport $transport A transport instance
      * @throws Swift_IoException
      */
@@ -26,6 +30,13 @@ class AutomailerSpool extends \Swift_ConfigurableSpool
     {
         $this->_em = $em; 
         $this->_transport = $transport; 
+=======
+     * @throws Swift_IoException
+     */
+    public function __construct($em)
+    {
+        $this->_em = $em;
+>>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
     }
 
     /**
@@ -54,10 +65,13 @@ class AutomailerSpool extends \Swift_ConfigurableSpool
 
     /**
      * Queues a message.
+<<<<<<< HEAD
      * To send messages using the default priority of email (X-priority)
 	 * 1 - immediate sending without adding in the queue
 	 * 2..5 - normal priority for to select from the queue
 	 * 3 - default priority
+=======
+>>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
      * @param  Swift_Mime_Message $message The message to store
      * @return boolean
      * @throws Swift_IoException
@@ -78,6 +92,7 @@ class AutomailerSpool extends \Swift_ConfigurableSpool
     	$mail->setIsHtml(($message->getContentType()=='text/html')?1:0);    
     	$mail->setSwiftMessage($message);	
     	
+<<<<<<< HEAD
     	$mail->setPriority($message->getPriority());
     	
     	if ($message->getPriority() == 1) {
@@ -95,6 +110,8 @@ class AutomailerSpool extends \Swift_ConfigurableSpool
             }
     	}
     	
+=======
+>>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
     	$this->_em->persist($mail);
         $this->_em->flush();
     }
@@ -155,6 +172,10 @@ class AutomailerSpool extends \Swift_ConfigurableSpool
                 $this->_em->persist($mail);
                 $this->_em->flush();
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
             if ($this->getMessageLimit() && $count >= $this->getMessageLimit()) {
                 break;
             }
