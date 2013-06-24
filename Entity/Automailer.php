@@ -72,7 +72,6 @@ class Automailer
 	 *
 	 */
 	private $swiftMessage;
-<<<<<<< HEAD
 	
 	/**
 	 * @var integer $priority
@@ -81,9 +80,7 @@ class Automailer
 	 *
 	 */
 	private $priority = 3;
-=======
->>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
-            
+    
     /**
      * @var datetime $createdAt
      * 
@@ -447,11 +444,7 @@ class Automailer
      */
     public function setSwiftMessage($swiftMessage)
     {
-<<<<<<< HEAD
         $this->swiftMessage = base64_encode(serialize($swiftMessage));
-=======
-        $this->swiftMessage = serialize($swiftMessage);
->>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
         return $this;
     }
 
@@ -462,7 +455,6 @@ class Automailer
      */
     public function getSwiftMessage()
     {
-<<<<<<< HEAD
         return unserialize(base64_decode($this->swiftMessage));
     }
 
@@ -486,8 +478,5 @@ class Automailer
     public function getPriority()
     {
         return $this->priority;
-=======
-        return unserialize($this->swiftMessage);
->>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
     }
 }

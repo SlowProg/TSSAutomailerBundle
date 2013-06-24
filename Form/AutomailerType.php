@@ -17,6 +17,7 @@ class AutomailerType extends AbstractType
             ->add('subject')
             ->add('body')
             ->add('altBody')
+            ->add('priority')
             ->add('createdAt')
             ->add('sentAt')
             ->add('isHtml')

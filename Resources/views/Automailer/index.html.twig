@@ -10,6 +10,7 @@
             <th>Subject</th>
             <th>Body</th>
             <th>Altbody</th>
+            <th>Priority</th>
             <th>Createdat</th>
             <th>Sentat</th>
             <th>Ishtml</th>
@@ -28,6 +29,7 @@
             <td>{{ entity.subject }}</td>
             <td>{{ entity.body }}</td>
             <td>{{ entity.altBody }}</td>
+            <td>{{ entity.priority }}</td>
             <td>{% if entity.createdAt %}{{ entity.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
             <td>{% if entity.sentAt %}{{ entity.sentAt|date('Y-m-d H:i:s') }}{% endif %}</td>
             <td>{{ entity.isHtml }}</td>
