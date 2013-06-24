@@ -12,10 +12,7 @@
     <services>
         <service id="swiftmailer.spool.automailer" class="%swiftmailer.spool.automailer.class%" public="false">
             <argument type="service" id="doctrine.orm.entity_manager" />
-<<<<<<< HEAD
             <argument type="service" id="swiftmailer.transport.real" />
-=======
->>>>>>> 12ad17e5935280d3edbf4eb36a293315bf5d99b8
         </service>
 
         <service id="automailer.plugin.beanstalk" class="%automailer.plugin.beanstalk.class%" public="false">
